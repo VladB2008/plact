@@ -34,8 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.Blues
 import com.example.myapplication.ui.theme.MyApplicationTheme
-import ui.Card.Card
-import ui.Card.RelazyCart
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,65 +56,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting( modifier: Modifier = Modifier) {
 
-    val favorite = remember { mutableStateListOf<Int>() }
-    LazyColumn (
-        modifier = modifier
-            .fillMaxSize()
-            .background(Color(0xFFE5E7EB))
-    ) {
 
-        item {
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-
-                Text(
-                    text = "События",
-                    fontSize = 30.sp
-                )
-                Row(verticalAlignment = Alignment.CenterVertically) {
-Icon(
-    painter = if (favorite.isEmpty()){
-        painterResource(R.drawable.serd)
-    }else{
-        painterResource(R.drawable.selected)
-    },
-
-    contentDescription = "Избранное",
-    modifier = modifier.size(40.dp),
-    tint =  Color(0xFF4F46E5),
-)
-Text(
-    text="${favorite.size}",
-    modifier = modifier.padding(start = 7.dp).align(Alignment.CenterVertically),
-    fontSize = 30.sp,
-    color = if(favorite.isEmpty()) Color.Transparent else Blues
-)
-                }
-            }
-
-
-            RelazyCart(
-                modifier = modifier,
-                favorite=favorite,
-                onFavoriteToggle = { id ->
-                    if (favorite.contains(id)) {
-                        favorite.remove(id)
-                    } else {
-                        favorite.add(id)
-                    }
-                }
-            )
-
-
-        }
-
-    }
 
 }
 
