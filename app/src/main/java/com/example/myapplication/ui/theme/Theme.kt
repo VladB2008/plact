@@ -26,12 +26,11 @@ private val LightColorScheme = lightColorScheme(
     onBackground = TextMain,// цвет основго цвета
 
     surface = Color.White,// фон карточек и тд.
-surfaceContainerHighest = Color.White,// фон выпадающих окон
-
-
-    surfaceContainerLow = Color.White,// фон для поиска
     onSurface = TextMain, // цвет текста на карточках
-onSurfaceVariant = TextSecond, // цвет второстипенного текста на карточках
+    onSurfaceVariant = TextSecond, // цвет второстипенного текста на карточках
+
+    surfaceContainerHighest = Color.White,// фон выпадающих окон
+    surfaceContainerLow = Color.White,// фон для поиска
     )
 
 
