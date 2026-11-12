@@ -24,7 +24,7 @@ fun SignUpSheet(onClose: () -> Unit, onDone: () -> Unit) {
     ) {
         Column(Modifier.padding(16.dp)){
 FormField("Имя", SignUp.name) {SignUp.name = it }
-FormField("Имя", SignUp.email) {SignUp.email = it }
+FormField("Email", SignUp.email) {SignUp.email = it }
 
             Row {
                 Checkbox(

@@ -34,8 +34,8 @@ import com.example.myapplication.ui.theme.Accent
 @Composable
 fun ListsScreen() {
 
-    LazyColumn{
-        item{Row(modifier = Modifier.height(56.dp).fillMaxWidth(),
+    Column{
+        Row(modifier = Modifier.height(56.dp).fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween){
 Text("События")
             Row(verticalAlignment = Alignment.CenterVertically,
@@ -80,5 +80,5 @@ Text("События")
             }
             }
         }
-    }
+
 }

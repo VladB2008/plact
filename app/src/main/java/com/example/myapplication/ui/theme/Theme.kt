@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 private val LightColorScheme = lightColorScheme(
 
    primary = Accent,
-
+    onPrimary = Color.White,
     secondaryContainer = Accent,
     onSecondaryContainer = Color.White,
 
@@ -50,7 +50,7 @@ fun MyApplicationTheme(
     content: @Composable () -> Unit
 ) {
 
-
+val colorScheme = LightColorScheme
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

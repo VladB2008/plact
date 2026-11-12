@@ -55,7 +55,7 @@ fun HeartButton(event: Event) {
 
 @Composable
 fun AppButton(text:String, onClick:() -> Unit) {
-    Button(onClick=onClick, shape = MaterialTheme.shapes.extraSmall){
+    Button(onClick=onClick, shape = MaterialTheme.shapes.extraSmall, ){
         Text(text)
     }
 }
