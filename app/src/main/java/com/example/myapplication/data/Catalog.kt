@@ -13,15 +13,15 @@ object Catalog {
 
      var category by mutableStateOf(categories[0])
 
-    val show get() = events.filter{eventoll ->
+    val show get() = events.filter{event ->
 
         val searchSpacer = search.trim()
 
-        (category == categories[0] || eventoll.category ==category) &&
-                (eventoll.name.contains(searchSpacer,ignoreCase =true)
+        (category == categories[0] || event.category ==category) &&
+                (event.name.contains(searchSpacer,ignoreCase =true)
 
                         ||
-                        eventoll.place.contains(searchSpacer, ignoreCase = true))
+                        event.place.contains(searchSpacer, ignoreCase = true))
     }
 
     fun reset() {search =""; category = categories[0]}

@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -48,6 +47,15 @@ var showForm by remember { mutableStateOf(false) }
         AppButton("Записаться") {showForm=true }
     }
 
+    if(showForm){
+        SignUpSheet(
+            onClose = {showForm=false},
+            onDone = {
+                showForm = false
+                signUp = true
+            }
+        )
+    }
 
 
 
