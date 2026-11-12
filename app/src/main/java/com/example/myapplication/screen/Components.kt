@@ -24,6 +24,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
@@ -75,7 +76,7 @@ fun FormField(label:String, value:String, onChange:(String) -> Unit) {
 fun EventCard(event:Event) {
 Card(onClick = { Catalog.opened =event}){
     ListItem(
-        leadingContent = {Box(Modifier.size(96.dp).background(Accent))},
+        leadingContent = {Box(Modifier.size(96.dp).background(Accent).clip(MaterialTheme.shapes.medium))},
         overlineContent = {Text(event.category)},
         headlineContent = {Text(event.name)},
         supportingContent = {Text("${event.date}\n${event.place}")},
