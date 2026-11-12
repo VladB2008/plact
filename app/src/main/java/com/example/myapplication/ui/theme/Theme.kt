@@ -19,21 +19,19 @@ import androidx.compose.ui.unit.dp
 
 private val LightColorScheme = lightColorScheme(
 
-   primary = Accent,
-    onPrimary = Color.White,
-    secondaryContainer = Accent,
-    onSecondaryContainer = Color.White,
+   primary = Accent,//главный цвет кнопки,сылки, сердечки и тд.
+    onPrimary = Color.White,// тцвет текста лежащие в главном цвете
 
-    background = Background,
-    onBackground = TextMain,
+    background = Background,// цвет фона
+    onBackground = TextMain,// цвет основго цвета
 
-    surface = Color.White,
-surfaceContainerHighest = Color.White,
+    surface = Color.White,// фон карточек и тд.
+surfaceContainerHighest = Color.White,// фон выпадающих окон
 
 
-    surfaceContainerLow = Color.White,
-    onSurface = TextMain,
-onSurfaceVariant = TextSecond,
+    surfaceContainerLow = Color.White,// фон для поиска
+    onSurface = TextMain, // цвет текста на карточках
+onSurfaceVariant = TextSecond, // цвет второстипенного текста на карточках
     )
 
 
